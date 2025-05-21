@@ -1,0 +1,19 @@
+gradle create project
+
+gradle init --type java-application
+
+task hello {
+    doLast {
+        println 'Hello, Gradle!'
+    }
+}
+
+test {
+    outputs.upToDateWhen {false}
+    testLogging {
+        events "passed", "failed", "skipped"
+        exceptionFormat "full"
+        showStandardStreams = true
+    }
+}
+

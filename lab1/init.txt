@@ -1,0 +1,5 @@
+install maven and gradle
+
+sudo apt install openjdk-11-jdk
+sudo apt install maven
+sudo apt install gradle

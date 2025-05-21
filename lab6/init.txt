@@ -1,0 +1,15 @@
+jenkins ci-cd
+
+pipeline {
+  agent any 
+  stages {
+    stage('Checkout') {
+      git url '<url>', branch 'main'
+    }
+  }
+  post {
+    always {
+      junit '**/target/surefire-reports/*.xml'
+    }
+  }
+}
